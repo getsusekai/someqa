@@ -6,6 +6,7 @@ const backBody = 173573901;
 let ids = [];
 
 let div = document.createElement('div');
+div.className = "wid"
 div.innerHTML = `<img id="car" src="https://psv4.userapi.com/c856232/u370549501/docs/d13/fd7bd18e0d14/car.jpg?extra=3vuHnapqIqp9Tr3dabKQRakRy3asim-nDF2OveGa34yC1LWI7Jv_1IzwieZNOdv_GnLXeI2iSHAJls2vzrgCcxM7SGVZq3UGs3YzN6HCjhxZ30kKGvKt5m-IbMHaGEiKYfUmahw0jMyPjAmL2UbSJ8sa6g" usemap="#carMap" alt="car">
     <map id="carMap" name="carMap">
         <area target="" alt="frontWheel" title="frontWheel" onclick="addProduct(frontWheels)" href="#" coords="175,222,215,235,245,262,256,301,248,338,223,369,179,383,142,372,113,344,98,306,105,267,125,245,146,229" shape="poly">
@@ -18,6 +19,7 @@ div.innerHTML = `<img id="car" src="https://psv4.userapi.com/c856232/u370549501/
         <area target="" alt="frontBody" title="frontBody" onclick="addProduct(frontBody)" href="#" coords="46,275,46,249,53,216,76,191,97,173,124,161,164,154,199,131,235,84,275,50,337,30,367,27,362,275,252,275,237,257,215,233,185,219,167,218,132,231,115,252,100,275" shape="poly">
         <area  target="" alt="backBody" title="backBody" onclick="addProduct(backBody)" href="#" coords="369,20,420,24,462,31,504,43,565,81,615,126,645,183,657,232,665,258,673,274,622,276,580,232,553,222,523,221,496,233,473,255,464,276,368,274" shape="poly">
     </map>`
+
 document.body.prepend(div);
 
 function addProduct (id) {
@@ -36,10 +38,5 @@ Ecwid.OnCartChanged.add(function(cart){
 })
 
 function collectedCar () {
-    document.getElementById("car").remove()
-    document.getElementById("carMap").remove()
-    let text = document.createElement('div')
-    text.className = "collected"
-    text.innerHTML = "<p>You have collected the car!</p>"
-    document.body.prepend(text)
+    div.innerHTML = "<p>You have collected the car!</p>"
 }
