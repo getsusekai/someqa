@@ -1,0 +1,33 @@
+body {
+    background: white;
+    border-radius: 1em;
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+label, span {
+    font-size: 20px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 14px 40px;
+    transition-duration: 0.4s;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #404040;
+    color: white;
+    box-shadow: 6px 6px 6px 6px rgba(0,0,0,0.24);
+}
+
+.collected {
+    font-size: 42px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>car</title>
+</head>
+<body>
+<script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?6732144&data_platform=code&data_date=2020-10-25" charset="utf-8"></script>
+<hr>
+<div data-layout="BIG_ICON_DETAILS_SUBTOTAL" class="ec-cart-widget"></div>
+<hr>
+<div>
+    <p>
+        <label for="frontWheels">Front Wheels: </label><span id="frontWheels"></span>
+        <br>
+        <label for="backWheels">Back Wheels: </label><span id="backWheels"></span>
+        <br>
+        <label for="bumper">Bumpers: </label><span id="bumper"></span>
+        <br>
+        <label for="frontBody">Front Body: </label><span id="frontBody"></span>
+        <br>
+        <label for="backBody">Back Body: </label><span id="backBody"></span>
+    </p>
+</div>
+<button id="clearCart" onclick="clearCart()" >Clear my Bag and reload page</button>
+<script type="text/javascript">
+    Ecwid.init();
+    Ecwid.OnCartChanged.add(function(cart){
+        for (let item of cart.items) {
+            if (!ids.includes(item.product.id)) {
+                ids += item.product.id
+            }
+            switch(item.product.id) {
+                case frontWheels:
+                    document.getElementById("frontWheels").innerHTML = item.quantity
+                    break;
+                case backWheels:
+                    document.getElementById("backWheels").innerHTML = item.quantity
+                    break;
+                case bumper:
+                    document.getElementById("bumper").innerHTML = item.quantity
+                    break;
+                case frontBody:
+                    document.getElementById("frontBody").innerHTML = item.quantity
+                    break;
+                case backBody:
+                    document.getElementById("backBody").innerHTML = item.quantity
+                    break;
+            }
+        }
+    })
+    function clearCart() {
+        Ecwid.Cart.clear()
+        location.reload()
+    }
+</script>
+</body>
+<script src="scripts/script.js"></script>
+</html>

@@ -1,0 +1,48 @@
+body {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    background-image: url(https://ghostlightning.files.wordpress.com/2011/07/pretty-silver-moon-stars.gif);
+    background-position: left top;
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+img {
+    position: relative;
+    left: 30%;
+    height: 200px;
+    width: 200px;
+}
+
+p, label {
+    color: white;
+    background-color: black;
+}
+
+button {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    padding: 14px 40px;
+    transition-duration: 0.4s;
+    width: 100%;
+}
+
+#choiceHead, #choiceTail{
+    width: 50%;
+}
+
+#flip{
+    width: 75%;
+}
+
+button:hover {
+    background-color: #404040;
+    color: white;
+    box-shadow: 6px 6px 6px 6px rgba(0,0,0,0.24);
+}
