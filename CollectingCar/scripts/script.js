@@ -7,7 +7,7 @@ const backBody = 249978004;
 let div = document.createElement('div');
 div.className = "wid"
 function addCar() {
-    div.innerHTML = `<img id="car" src="https://psv4.userapi.com/c856232/u370549501/docs/d13/fd7bd18e0d14/car.jpg?extra=3vuHnapqIqp9Tr3dabKQRakRy3asim-nDF2OveGa34yC1LWI7Jv_1IzwieZNOdv_GnLXeI2iSHAJls2vzrgCcxM7SGVZq3UGs3YzN6HCjhxZ30kKGvKt5m-IbMHaGEiKYfUmahw0jMyPjAmL2UbSJ8sa6g" usemap="#carMap" alt="car">
+    div.innerHTML = `<img id="car" src="https://cdn1.radikalno.ru/uploads/2020/11/1/80fbe6890ea018b5d854cc342cc607aa-full.jpg" usemap="#carMap" alt="car">
     <map id="carMap" name="carMap">
         <area target="" alt="frontWheel" title="frontWheel" onclick="addProduct(frontWheels)" href="#" coords="175,222,215,235,245,262,256,301,248,338,223,369,179,383,142,372,113,344,98,306,105,267,125,245,146,229" shape="poly">
         <area target="" alt="backWheel" title="backWheel" onclick="addProduct(backWheels)" href="#" coords="543,225,588,240,614,277,617,313,605,348,583,367,554,379,514,374,484,354,464,321,467,285,477,251,507,230" shape="poly">
